@@ -1,0 +1,46 @@
+# 비밀 정보
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 개인 사진과 데이터 (공개 저장소라 절대 커밋하지 않아요)
+data/local/
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+data/**/*.heic
+data/**/*.HEIC
+data/**/*.mov
+data/**/*.mp4
+ml/**/*.jpg
+ml/**/*.jpeg
+ml/**/*.png
+ml/**/*.heic
+ml/**/*.HEIC
+
+# 모델 가중치
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+*.mlmodel
+*.mlpackage/
+*.safetensors
+
+# 파이썬
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 노드
+node_modules/
+
+# 운영체제와 편집기
+.DS_Store
+.idea/
+.vscode/
