@@ -1,6 +1,6 @@
 # 잇기 인물 가림 학습 데이터
 
-MegaLoc LoRA 시범 학습에 쓸 합성 데이터의 생성 코드, 검증 코드와 목록이에요. 공개 저장소라 이미지와 컷아웃은 올리지 않고 `data/private/`에 해당하는 로컬 폴더에 둬요.
+MegaLoc LoRA 시범 학습에 쓸 합성 데이터의 생성 코드, 검증 코드와 목록이에요. 합성 이미지는 [data/occlusion-train-v2](../../../data/occlusion-train-v2/README.md)에 있어요. 인물 컷아웃은 올리지 않고 로컬 `data/private/`에 둬요.
 
 ## v1을 늘린 이유
 
