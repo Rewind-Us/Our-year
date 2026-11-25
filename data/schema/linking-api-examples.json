@@ -1,0 +1,239 @@
+{
+  "awaitingSubmission": {
+    "room": {
+      "roomId": "room-demo",
+      "viewerId": "p-a",
+      "roomStatus": "awaiting_submission",
+      "jobId": null,
+      "participants": [
+        {
+          "id": "p-a",
+          "submissionStatus": "submitted"
+        },
+        {
+          "id": "p-b",
+          "submissionStatus": "pending"
+        }
+      ]
+    }
+  },
+  "analyzing": {
+    "room": {
+      "roomId": "room-demo",
+      "viewerId": "p-a",
+      "roomStatus": "analyzing",
+      "jobId": "job-demo",
+      "participants": [
+        {
+          "id": "p-a",
+          "submissionStatus": "submitted"
+        },
+        {
+          "id": "p-b",
+          "submissionStatus": "submitted"
+        }
+      ]
+    },
+    "job": {
+      "jobId": "job-demo",
+      "status": "processing"
+    }
+  },
+  "awaitingVisibility": {
+    "room": {
+      "roomId": "room-demo",
+      "viewerId": "p-a",
+      "roomStatus": "reviewing",
+      "jobId": "job-demo",
+      "participants": [
+        {
+          "id": "p-a",
+          "submissionStatus": "submitted"
+        },
+        {
+          "id": "p-b",
+          "submissionStatus": "submitted"
+        }
+      ]
+    },
+    "job": {
+      "jobId": "job-demo",
+      "status": "succeeded"
+    },
+    "candidates": {
+      "items": [
+        {
+          "candidateId": "event-demo",
+          "candidateStatus": "awaiting_visibility",
+          "viewerOwnedPhotos": [
+            {
+              "photoId": "photo-a-03",
+              "capturedAt": "2026-12-14T10:20:00+09:00",
+              "previewUrl": "/rooms/room-demo/photos/photo-a-03/preview"
+            }
+          ],
+          "viewerVisibility": "pending",
+          "partnerVisibility": "pending"
+        }
+      ]
+    }
+  },
+  "awaitingConfirmation": {
+    "room": {
+      "roomId": "room-demo",
+      "viewerId": "p-a",
+      "roomStatus": "reviewing",
+      "jobId": "job-demo",
+      "participants": [
+        {
+          "id": "p-a",
+          "submissionStatus": "submitted"
+        },
+        {
+          "id": "p-b",
+          "submissionStatus": "submitted"
+        }
+      ]
+    },
+    "candidates": {
+      "items": [
+        {
+          "candidateId": "event-demo",
+          "candidateStatus": "awaiting_confirmation",
+          "photos": [
+            {
+              "participantId": "p-a",
+              "photoId": "photo-a-03",
+              "capturedAt": "2026-12-14T10:20:00+09:00",
+              "previewUrl": "/rooms/room-demo/photos/photo-a-03/preview"
+            },
+            {
+              "participantId": "p-b",
+              "photoId": "photo-b-07",
+              "capturedAt": "2026-12-14T10:21:00+09:00",
+              "previewUrl": "/rooms/room-demo/photos/photo-b-07/preview"
+            }
+          ],
+          "viewerConfirmation": "same_moment",
+          "partnerConfirmation": "pending"
+        }
+      ]
+    }
+  },
+  "ready": {
+    "room": {
+      "roomId": "room-demo",
+      "viewerId": "p-a",
+      "roomStatus": "recap_ready",
+      "jobId": "job-demo",
+      "participants": [
+        {
+          "id": "p-a",
+          "submissionStatus": "submitted"
+        },
+        {
+          "id": "p-b",
+          "submissionStatus": "submitted"
+        }
+      ]
+    },
+    "candidates": {
+      "items": [
+        {
+          "candidateId": "event-demo",
+          "candidateStatus": "confirmed",
+          "photos": [
+            {
+              "participantId": "p-a",
+              "photoId": "photo-a-03",
+              "capturedAt": "2026-12-14T10:20:00+09:00",
+              "previewUrl": "/rooms/room-demo/photos/photo-a-03/preview"
+            },
+            {
+              "participantId": "p-b",
+              "photoId": "photo-b-07",
+              "capturedAt": "2026-12-14T10:21:00+09:00",
+              "previewUrl": "/rooms/room-demo/photos/photo-b-07/preview"
+            }
+          ],
+          "viewerConfirmation": "same_moment",
+          "partnerConfirmation": "same_moment"
+        }
+      ]
+    },
+    "recap": {
+      "roomId": "room-demo",
+      "items": [
+        {
+          "candidateId": "event-demo",
+          "eventDate": "2026-12-14",
+          "photos": [
+            {
+              "participantId": "p-a",
+              "photoId": "photo-a-03",
+              "capturedAt": "2026-12-14T10:20:00+09:00",
+              "previewUrl": "/rooms/room-demo/photos/photo-a-03/preview"
+            },
+            {
+              "participantId": "p-b",
+              "photoId": "photo-b-07",
+              "capturedAt": "2026-12-14T10:21:00+09:00",
+              "previewUrl": "/rooms/room-demo/photos/photo-b-07/preview"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "noCandidates": {
+    "room": {
+      "roomId": "room-demo",
+      "viewerId": "p-a",
+      "roomStatus": "no_candidates",
+      "jobId": "job-demo",
+      "participants": [
+        {
+          "id": "p-a",
+          "submissionStatus": "submitted"
+        },
+        {
+          "id": "p-b",
+          "submissionStatus": "submitted"
+        }
+      ]
+    },
+    "job": {
+      "jobId": "job-demo",
+      "status": "succeeded"
+    },
+    "candidates": {
+      "items": []
+    }
+  },
+  "analysisFailed": {
+    "room": {
+      "roomId": "room-demo",
+      "viewerId": "p-a",
+      "roomStatus": "analysis_failed",
+      "jobId": "job-demo",
+      "participants": [
+        {
+          "id": "p-a",
+          "submissionStatus": "submitted"
+        },
+        {
+          "id": "p-b",
+          "submissionStatus": "submitted"
+        }
+      ]
+    },
+    "job": {
+      "jobId": "job-demo",
+      "status": "failed",
+      "error": {
+        "code": "ANALYSIS_FAILED",
+        "retryable": true
+      }
+    }
+  }
+}
