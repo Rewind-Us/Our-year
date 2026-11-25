@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "올해 우리는",
+    "slug": "our-year",
+    "version": "0.1.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "web": {
+      "output": "single",
+      "favicon": "./assets/heart-clay.png"
+    }
+  }
+}
