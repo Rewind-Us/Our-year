@@ -14,13 +14,36 @@ export const catalog = [
   ['photo-a-13', 'cafe', '카페에 앉은 친구'],
   ['photo-a-14', 'tea', '마지막 한 모금'],
 ].map(([photoId, asset, caption]) => ({ photoId, asset, caption }));
-const partnerPhoto = { photoId: 'photo-b-07', asset: 'friend', caption: '지민이 찍은 서연' };
-const candidateId = 'event-demo';
+const demoCandidates = [
+  { candidateId: 'event-demo', eventDate: '2026-12-14', viewerPhotoId: 'photo-a-03', caption: '같은 테이블,\n서로 다른 두 장',
+    partnerPhoto: { photoId: 'photo-b-07', asset: 'friend', caption: '지민이 찍은 서연' } },
+  { candidateId: 'event-demo-2', eventDate: '2026-12-20', viewerPhotoId: 'photo-a-12', caption: '함께 보낸\n겨울 하루',
+    partnerPhoto: { photoId: 'photo-b-11', asset: 'snow', caption: '지민이 찍은 눈 내린 거리' } },
+];
+const findCandidate = id => demoCandidates.find(item => item.candidateId === id);
+const candidatePhotos = item => [
+  { participantId: hostId, ...catalog.find(photo => photo.photoId === item.viewerPhotoId) },
+  { participantId: friendId, ...item.partnerPhoto },
+];
 export const initialDemo = {
   step: 'home',
   photoIds: catalog.filter((_, index) => index !== 2 && index !== 7).map(photo => photo.photoId),
+  queue: [],
+  confirmed: [],
   recap: null,
 };
+
+// 지금 후보의 검토를 마치고 다음 후보로 가요. 남은 후보가 없으면 확인한 순간으로 회고를 만들어요.
+function nextCandidate(state, confirmed = state.confirmed) {
+  const queue = state.queue.slice(1);
+  if (queue.length) return { ...state, queue, confirmed, step: 'approval' };
+  if (!confirmed.length) return { ...state, queue, confirmed, step: 'allDeclined' };
+  const items = confirmed.map(id => {
+    const item = findCandidate(id);
+    return { candidateId: id, eventDate: item.eventDate, caption: item.caption, photos: candidatePhotos(item) };
+  });
+  return { ...state, queue, confirmed, step: 'recap', recap: { roomId: 'room-demo', items } };
+}
 
 export function updateDemo(state, action) {
   switch (action.type) {
@@ -31,7 +54,7 @@ export function updateDemo(state, action) {
     case 'invite':
       return { ...initialDemo, step: 'invite', recap: state.recap };
     case 'pick':
-      return { ...state, step: 'pick' };
+      return { ...state, step: 'pick', queue: [], confirmed: [] };
     case 'togglePhoto': {
       if (state.step !== 'pick') return state;
       const photoIds = state.photoIds.includes(action.photoId)
@@ -43,24 +66,25 @@ export function updateDemo(state, action) {
       return state.step === 'pick' && state.photoIds.length >= 10 ? { ...state, step: 'waiting' } : state;
     case 'friendSubmitted':
       return state.step === 'waiting' ? { ...state, step: 'analyzing' } : state;
-    case 'analysisReady':
+    case 'analysisReady': {
       if (state.step !== 'analyzing') return state;
-      return { ...state, step: state.photoIds.includes('photo-a-03') ? 'approval' : 'empty' };
+      const queue = demoCandidates.filter(item => state.photoIds.includes(item.viewerPhotoId)).map(item => item.candidateId);
+      return { ...state, queue, confirmed: [], step: queue.length ? 'approval' : 'empty' };
+    }
+    case 'analysisFailed':
+      return state.step === 'analyzing' ? { ...state, step: 'failed' } : state;
+    case 'decline':
+      return state.step === 'approval' ? nextCandidate(state) : state;
     case 'approve':
       return state.step === 'approval' ? { ...state, step: 'visibilityWait' } : state;
     case 'friendApproved':
       return state.step === 'visibilityWait' ? { ...state, step: 'compare' } : state;
     case 'reject':
-      return state.step === 'compare' ? { ...state, step: 'empty' } : state;
+      return state.step === 'compare' ? nextCandidate(state) : state;
     case 'confirm':
       return state.step === 'compare' ? { ...state, step: 'confirmationWait' } : state;
-    case 'friendConfirmed': {
-      if (state.step !== 'confirmationWait') return state;
-      const photos = selectDemoView(state).candidates.items[0].photos;
-      return { ...state, step: 'recap', recap: { roomId: 'room-demo', items: [
-        { candidateId, eventDate: '2026-12-14', photos },
-      ] } };
-    }
+    case 'friendConfirmed':
+      return state.step === 'confirmationWait' ? nextCandidate(state, [...state.confirmed, state.queue[0]]) : state;
     default:
       return state;
   }
@@ -74,7 +98,9 @@ export function selectDemoView(state) {
     visibilityWait: 'reviewing',
     compare: 'reviewing',
     confirmationWait: 'reviewing',
+    allDeclined: 'reviewing',
     empty: 'no_candidates',
+    failed: 'analysis_failed',
     recap: 'recap_ready',
   }[step] ?? 'awaiting_submission';
   const participants = [
@@ -83,18 +109,23 @@ export function selectDemoView(state) {
   ];
   const room = { roomId: 'room-demo', viewerId: hostId, roomStatus, participants,
     jobId: participants.every(person => person.submissionStatus === 'submitted') ? 'job-demo' : null };
+  const current = findCandidate(state.queue[0]);
   if (step === 'approval' || step === 'visibilityWait') {
     return { room, candidates: { items: [{
-      candidateId, candidateStatus: 'awaiting_visibility', viewerOwnedPhotos: [catalog[0]],
+      candidateId: current.candidateId, eventDate: current.eventDate, candidateStatus: 'awaiting_visibility',
+      viewerOwnedPhotos: candidatePhotos(current).filter(photo => photo.participantId === hostId),
       viewerVisibility: step === 'visibilityWait' ? 'approved' : 'pending', partnerVisibility: 'pending',
     }] } };
   }
   if (step === 'compare' || step === 'confirmationWait') {
     return { room, candidates: { items: [{
-      candidateId, candidateStatus: 'awaiting_confirmation',
+      candidateId: current.candidateId, eventDate: current.eventDate, candidateStatus: 'awaiting_confirmation',
       viewerConfirmation: step === 'confirmationWait' ? 'same_moment' : 'pending', partnerConfirmation: 'pending',
-      photos: [{ participantId: hostId, ...catalog[0] }, { participantId: friendId, ...partnerPhoto }],
+      photos: candidatePhotos(current),
     }] } };
+  }
+  if (step === 'failed') {
+    return { room, job: { jobId: 'job-demo', status: 'failed', error: { code: 'ANALYSIS_FAILED', retryable: true } }, candidates: { items: [] } };
   }
   return { room, candidates: { items: [] }, recap: ['archive', 'recap'].includes(step) ? recap : null };
 }
