@@ -27,6 +27,14 @@ const nextDemoStep = {
   confirmationWait: ['friendConfirmed', 1700],
 };
 
+// 실패 화면 확인용이에요. 주소에 ?demo=analysis_failed를 붙이면 분석이 실패해요.
+const failAnalysis = typeof window !== 'undefined' && !!window.location
+  && new URLSearchParams(window.location.search).get('demo') === 'analysis_failed';
+const formatDate = date => {
+  const [, month, day] = date.split('-').map(Number);
+  return month + '월 ' + day + '일';
+};
+
 function Pixel({ source, width, height = width }) {
   return <Image source={source} style={{ width, height }} accessible={false} />;
 }
@@ -157,7 +165,7 @@ export default function App() {
   useEffect(() => {
     if (!transition) return;
     const [type, delay] = transition;
-    const timeout = setTimeout(() => dispatch({ type }), delay);
+    const timeout = setTimeout(() => dispatch({ type: type === 'analysisReady' && failAnalysis ? 'analysisFailed' : type }), delay);
     return () => clearTimeout(timeout);
   }, [transition]);
 
@@ -217,17 +225,20 @@ export default function App() {
     case 'visibilityWait':
       return (
         <Shell {...shell} key={step} action={step === 'approval' ? (
-          <Button label="이 사진 보여 주기" onPress={go('approve')} />
+          <View style={styles.pair}>
+            <Button label="보여 주지 않기" onPress={go('decline')} secondary flex />
+            <Button label="이 사진 보여 주기" onPress={go('approve')} flex />
+          </View>
         ) : <Button label="홈으로 돌아가기" onPress={end} secondary />}>
           <Intro title={step === 'approval' ? '지민에게 보여 줄\n사진을 확인해요' : '지민의 사진 공개를\n기다리고 있어요'}
             body={step === 'approval' ? '함께 보낸 순간으로 보이는 내 사진이에요.' : '각자 승인한 사진을 함께 볼 수 있어요.'} />
           {candidate.viewerOwnedPhotos.map(photo => (
             <View style={styles.approvalPhoto} key={photo.photoId}>
               <Photo photo={photo} style={styles.pairPhoto} />
-              <Text style={styles.photoOwner}>12월 14일 · 서연의 사진</Text>
+              <Text style={styles.photoOwner}>{formatDate(candidate.eventDate)}, 서연의 사진</Text>
             </View>
           ))}
-          <View style={styles.notice}><Text style={styles.noticeText}>승인한 사진은 이 방의 친구에게 보여요.</Text></View>
+          <View style={styles.notice}><Text style={styles.noticeText}>승인한 사진은 이 방의 친구에게 보여요. 보여 주지 않으면 이 순간은 회고에서 빠져요.</Text></View>
         </Shell>
       );
     case 'compare':
@@ -241,7 +252,7 @@ export default function App() {
         ) : <Button label="홈으로 돌아가기" onPress={end} secondary />}>
           <Intro title={step === 'compare' ? '같은 날의\n기억인가요?' : '지민의 답을\n기다리고 있어요'}
             body={step === 'compare' ? '둘 다 보여 주기로 한 사진이에요. 각자 같은 순간인지 확인해요.' : '지민도 같은 순간이라고 확인하면 회고에 담겨요.'} />
-          <View style={styles.gridHeader}><Text style={styles.entryTitle}>12월 14일</Text></View>
+          <View style={styles.gridHeader}><Text style={styles.entryTitle}>{formatDate(candidate.eventDate)}</Text></View>
           <PhotoPair photos={candidate.photos} />
           {step === 'confirmationWait' ? <View accessibilityLiveRegion="polite">
             <StatusRow name="서연 (나)" status="확인 완료" ready />
@@ -253,6 +264,20 @@ export default function App() {
       return (
         <Shell {...shell} key={step} action={<Button label="사진 다시 고르기" onPress={pick} />}>
           <Intro title={'함께한 순간을\n찾지 못했어요'} body="친구와 같은 날을 기억해 보고 사진을 다시 골라 보세요." />
+          <Friends invited />
+        </Shell>
+      );
+    case 'allDeclined':
+      return (
+        <Shell {...shell} key={step} action={<Button label="사진 다시 고르기" onPress={pick} />}>
+          <Intro title={'이번에는 회고에\n담은 순간이 없어요'} body="찾은 순간을 모두 확인했어요. 다른 사진으로 다시 찾아볼 수 있어요." />
+          <Friends invited />
+        </Shell>
+      );
+    case 'failed':
+      return (
+        <Shell {...shell} key={step} action={<Button label="사진 다시 고르기" onPress={pick} />}>
+          <Intro title={'사진을 비교하다가\n문제가 생겼어요'} body="고른 사진은 그대로 남아 있어요. 사진을 확인하고 다시 제출해 주세요." />
           <Friends invited />
         </Shell>
       );
@@ -271,8 +296,8 @@ export default function App() {
             <View key={item.candidateId} style={styles.recapCard}>
               <PhotoPair photos={item.photos} recap />
               <View style={styles.recapCaption}>
-                <Text style={styles.note}>12월 14일</Text>
-                <Text style={styles.caption}>{'같은 테이블,\n서로 다른 두 장'}</Text>
+                <Text style={styles.note}>{formatDate(item.eventDate)}</Text>
+                <Text style={styles.caption}>{item.caption}</Text>
               </View>
             </View>
           ))}
