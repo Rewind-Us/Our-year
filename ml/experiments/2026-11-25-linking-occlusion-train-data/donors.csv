@@ -1,0 +1,17 @@
+donor_id,split,cutout_file,author,source_url,photo_license
+02b2ab24e7e709cf,train,occlusion-train-v2/cutouts/02b2ab24e7e709cf.png,Gaël Marziou,https://www.flickr.com/photos/gmarziou/3947297452,https://creativecommons.org/licenses/by/2.0/
+09a31536cef18a72,train,occlusion-train-v2/cutouts/09a31536cef18a72.png,Pyngodan,https://www.flickr.com/photos/pyngodan/4129875463,https://creativecommons.org/licenses/by/2.0/
+0a877314ca2039d9,train,occlusion-train-v2/cutouts/0a877314ca2039d9.png,Juliana Dacoregio,https://www.flickr.com/photos/heresialoira/4775594683,https://creativecommons.org/licenses/by/2.0/
+0dce9e80f546efc6,train,occlusion-train-v2/cutouts/0dce9e80f546efc6.png,Naijamayor,https://www.flickr.com/photos/paperboyz/6041388749,https://creativecommons.org/licenses/by/2.0/
+0f0c237588553730,train,occlusion-train-v2/cutouts/0f0c237588553730.png,tapetenpics,https://www.flickr.com/photos/tapetenpics/15000616548,https://creativecommons.org/licenses/by/2.0/
+2aacbe29eee34844,train,occlusion-train-v2/cutouts/2aacbe29eee34844.png,Heath Alseike,https://www.flickr.com/photos/99624358@N00/17291824345,https://creativecommons.org/licenses/by/2.0/
+5109720f0b14681a,train,occlusion-train-v2/cutouts/5109720f0b14681a.png,Jorge Mejía peralta,https://www.flickr.com/photos/mejiaperalta/8567866430,https://creativecommons.org/licenses/by/2.0/
+52b40c45831c613c,train,occlusion-train-v2/cutouts/52b40c45831c613c.png,Ducksboard,https://www.flickr.com/photos/66439219@N02/7006693522,https://creativecommons.org/licenses/by/2.0/
+5ebb0d3970f9c807,train,occlusion-train-v2/cutouts/5ebb0d3970f9c807.png,David Leggett,https://www.flickr.com/photos/theleggett/4780863298,https://creativecommons.org/licenses/by/2.0/
+6b9fc961a434ab72,train,occlusion-train-v2/cutouts/6b9fc961a434ab72.png,Hannah Donovan,https://www.flickr.com/photos/hannahdonovan/5900444685/,https://creativecommons.org/licenses/by/2.0/
+83c8fff6303c468a,train,occlusion-train-v2/cutouts/83c8fff6303c468a.png,chrstphre ㋛ campbell,https://www.flickr.com/photos/chrstphre/3073299169,https://creativecommons.org/licenses/by/2.0/
+b524bb1b17ed5c1e,train,occlusion-train-v2/cutouts/b524bb1b17ed5c1e.png,West Point - The U.S. Military Academy,https://www.flickr.com/photos/west_point/4904073897,https://creativecommons.org/licenses/by/2.0/
+ea61e29dc67e12ad,train,occlusion-train-v2/cutouts/ea61e29dc67e12ad.png,Emily Allen,https://www.flickr.com/photos/empracht/158889578,https://creativecommons.org/licenses/by/2.0/
+91271214e694cc03,synthetic_dev,occlusion-train-v2/cutouts/91271214e694cc03.png,JimBain,https://www.flickr.com/photos/rpod/7970824618,https://creativecommons.org/licenses/by/2.0/
+ac764caccbebd4fa,synthetic_dev,occlusion-train-v2/cutouts/ac764caccbebd4fa.png,shahanaj27,https://www.flickr.com/photos/77494817@N08/7095415817,https://creativecommons.org/licenses/by/2.0/
+f811b7056327f050,synthetic_dev,occlusion-train-v2/cutouts/f811b7056327f050.png,Alistair Marshall,https://www.flickr.com/photos/thatscottishengineer/3093036816,https://creativecommons.org/licenses/by/2.0/

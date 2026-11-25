@@ -14,6 +14,9 @@ data/**/*.heic
 data/**/*.HEIC
 data/**/*.mov
 data/**/*.mp4
+# 출처를 남긴 공개 사진 합성 데이터만 예외로 올려요 (KAN-10)
+!data/occlusion-train-v2/train/*.png
+!data/occlusion-train-v2/synthetic_dev/*.png
 ml/**/*.jpg
 ml/**/*.jpeg
 ml/**/*.png
