@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 760" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="12">
+  <rect width="980" height="760" fill="#fff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
+  </defs>
+  <text x="20" y="30" font-size="17" font-weight="bold" fill="#111">학습마다 정답과 오답을 어떻게 만들었나</text>
+  <text x="20" y="50" fill="#555">실선 연결은 "가깝게", 점선 연결은 "멀게" 학습한 짝이에요.</text>
+
+  <!-- A 가림 증류 -->
+  <rect x="20" y="70" width="460" height="200" fill="none" stroke="#bbb"/>
+  <text x="32" y="92" font-size="14" font-weight="bold">A. e3 가림 증류 (11/25)</text>
+  <rect x="40" y="110" width="80" height="60" fill="none" stroke="#111"/><text x="80" y="144" text-anchor="middle">원본 사진</text>
+  <rect x="40" y="185" width="80" height="60" fill="none" stroke="#111"/><rect x="70" y="195" width="22" height="50" fill="#111"/><text x="80" y="260" text-anchor="middle" fill="#555">사람 합성본</text>
+  <line x1="120" y1="140" x2="185" y2="140" stroke="#111" marker-end="url(#a)"/>
+  <line x1="120" y1="215" x2="185" y2="215" stroke="#111" marker-end="url(#a)"/>
+  <rect x="190" y="120" width="110" height="40" fill="none" stroke="#111"/><text x="245" y="138" text-anchor="middle">원래 MegaLoc</text><text x="245" y="153" text-anchor="middle" fill="#555">(교사, 고정)</text>
+  <rect x="190" y="195" width="110" height="40" fill="none" stroke="#111" stroke-width="2"/><text x="245" y="213" text-anchor="middle">LoRA 모델</text><text x="245" y="228" text-anchor="middle" fill="#555">(학생)</text>
+  <line x1="300" y1="140" x2="360" y2="175" stroke="#111"/><line x1="300" y1="215" x2="360" y2="180" stroke="#111"/>
+  <text x="368" y="170">합성본의 벡터를</text><text x="368" y="186">원본 벡터와 같게</text>
+
+  <!-- B 장소 묶음 -->
+  <rect x="500" y="70" width="460" height="200" fill="none" stroke="#bbb"/>
+  <text x="512" y="92" font-size="14" font-weight="bold">B. DINOv2 튜닝, ETH3D 층 추가 (11/26)</text>
+  <text x="520" y="115" fill="#555">같은 장소에서 찍은 서로 다른 사진들</text>
+  <rect x="520" y="125" width="50" height="40" fill="none" stroke="#111"/><rect x="580" y="125" width="50" height="40" fill="none" stroke="#111"/><rect x="640" y="125" width="50" height="40" fill="none" stroke="#111"/>
+  <text x="605" y="182" text-anchor="middle">장소 1</text>
+  <line x1="570" y1="145" x2="580" y2="145" stroke="#111"/><line x1="630" y1="145" x2="640" y2="145" stroke="#111"/>
+  <rect x="740" y="125" width="50" height="40" fill="none" stroke="#111"/><rect x="800" y="125" width="50" height="40" fill="none" stroke="#111"/>
+  <text x="795" y="182" text-anchor="middle">장소 2</text>
+  <line x1="790" y1="145" x2="800" y2="145" stroke="#111"/>
+  <line x1="690" y1="145" x2="740" y2="145" stroke="#111" stroke-dasharray="4 3"/>
+  <text x="520" y="215">DINOv2: 위키 명소 36곳으로 학습, 12곳으로 평가</text>
+  <text x="520" y="235">ETH3D: 13개 장면, 장면 4묶음 교차검증</text>
+  <text x="520" y="255" fill="#555">사진 한 장 = 벡터 하나로 비교</text>
+
+  <!-- C 식당 영상 -->
+  <rect x="20" y="290" width="460" height="200" fill="none" stroke="#bbb"/>
+  <text x="32" y="312" font-size="14" font-weight="bold">C. run1 식당 영상 EgoFoodPlaces (11/26)</text>
+  <line x1="40" y1="360" x2="440" y2="360" stroke="#111"/>
+  <text x="40" y="345" fill="#555">한 식당 방문을 1인칭으로 찍은 영상</text>
+  <rect x="60" y="370" width="50" height="40" fill="none" stroke="#111"/><text x="85" y="425" text-anchor="middle">프레임 a</text>
+  <rect x="300" y="370" width="50" height="40" fill="none" stroke="#111"/><text x="325" y="425" text-anchor="middle">프레임 b</text>
+  <line x1="110" y1="390" x2="300" y2="390" stroke="#111"/><text x="205" y="383" text-anchor="middle">3분 이상 떨어짐 = 정답</text>
+  <text x="40" y="455">다른 식당 방문의 프레임 = 오답(InfoNCE), 원래 모델에서 멀어지지 않게 kd 1.0</text>
+  <text x="40" y="475" fill="#555">46개 식당 종류, 방문 432개, 배치당 방문 16개</text>
+
+  <!-- D 파노라마 -->
+  <rect x="500" y="290" width="460" height="200" fill="none" stroke="#bbb"/>
+  <text x="512" y="312" font-size="14" font-weight="bold">D. 파노라마 LoRA: pano, g, f (11/27)</text>
+  <ellipse cx="600" cy="370" rx="70" ry="35" fill="none" stroke="#111"/><text x="600" y="374" text-anchor="middle">360° 파노라마</text>
+  <line x1="560" y1="342" x2="530" y2="410" stroke="#111"/><line x1="640" y1="342" x2="680" y2="410" stroke="#111"/>
+  <rect x="505" y="410" width="50" height="40" fill="none" stroke="#111"/><rect x="520" y="420" width="12" height="30" fill="#111"/>
+  <rect x="655" y="410" width="50" height="40" fill="none" stroke="#111"/>
+  <line x1="555" y1="430" x2="655" y2="430" stroke="#111"/><text x="605" y="465" text-anchor="middle">방향 30~180° 차이 = 정답</text>
+  <text x="725" y="360">같은 배치의</text><text x="725" y="376">다른 파노라마 7장 = 오답</text>
+  <text x="725" y="400">사람은 70% 확률로 합성,</text><text x="725" y="416">점수에서 제외</text>
+  <text x="725" y="440" fill="#555">같은 환경 점수로 비교,</text><text x="725" y="456" fill="#555">InfoNCE(온도 0.03)</text>
+
+  <!-- E 큐 -->
+  <rect x="20" y="510" width="940" height="230" fill="none" stroke="#bbb"/>
+  <text x="32" y="532" font-size="14" font-weight="bold">E. 큐: q0, q1, q2 (11/27)</text>
+  <text x="40" y="552">D와 같고, 최근 배치에서 나온 조각 256장을 저장해 두었다가 오답으로 더 써요. 오답이 쌍마다 7개에서 263개로 늘어요.</text>
+  <rect x="40" y="582" width="60" height="45" fill="none" stroke="#111" stroke-width="2"/><text x="70" y="607" text-anchor="middle">질문</text>
+  <rect x="140" y="582" width="60" height="45" fill="none" stroke="#111"/><text x="170" y="607" text-anchor="middle">정답</text>
+  <line x1="100" y1="602" x2="140" y2="602" stroke="#111"/>
+  <g stroke="#111" fill="none">
+    <rect x="260" y="582" width="30" height="45"/><rect x="295" y="582" width="30" height="45"/><rect x="330" y="582" width="30" height="45"/>
+  </g>
+  <text x="310" y="572" text-anchor="middle">배치 안 오답 7</text>
+  <g stroke="#777" fill="none">
+    <rect x="420" y="582" width="20" height="45"/><rect x="443" y="582" width="20" height="45"/><rect x="466" y="582" width="20" height="45"/><rect x="489" y="582" width="20" height="45"/><rect x="512" y="582" width="20" height="45"/><rect x="535" y="582" width="20" height="45"/>
+  </g>
+  <text x="580" y="607" fill="#777">…</text>
+  <text x="490" y="572" text-anchor="middle" fill="#555">큐에 저장한 이전 조각 256</text>
+  <path d="M70,625 Q200,690 310,625" fill="none" stroke="#111" stroke-dasharray="4 3"/>
+  <path d="M70,625 Q300,720 510,625" fill="none" stroke="#777" stroke-dasharray="4 3"/>
+  <text x="640" y="590">효과: 60~120°는 크게 올랐지만</text>
+  <text x="640" y="610">30~60°는 떨어지고 학습 중에 크게 오르내렸어요.</text>
+  <text x="640" y="630">실사진에서는 오탐이 크게 늘었어요(q1: 44/556).</text>
+</svg>

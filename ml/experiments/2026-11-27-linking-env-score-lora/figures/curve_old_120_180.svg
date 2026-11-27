@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="12"><rect width="760" height="380" fill="#fff"/>
+<text x="60" y="28" font-size="15" font-weight="bold" fill="#111">옛 분할: kd와 스텝 수에 따른 120~180° 통과율</text>
+<line x1="60" y1="330.0" x2="590" y2="330.0" stroke="#ddd"/><text x="52" y="334.0" text-anchor="end" fill="#555">20</text>
+<line x1="60" y1="274.0" x2="590" y2="274.0" stroke="#ddd"/><text x="52" y="278.0" text-anchor="end" fill="#555">30</text>
+<line x1="60" y1="218.0" x2="590" y2="218.0" stroke="#ddd"/><text x="52" y="222.0" text-anchor="end" fill="#555">40</text>
+<line x1="60" y1="162.0" x2="590" y2="162.0" stroke="#ddd"/><text x="52" y="166.0" text-anchor="end" fill="#555">50</text>
+<line x1="60" y1="106.0" x2="590" y2="106.0" stroke="#ddd"/><text x="52" y="110.0" text-anchor="end" fill="#555">60</text>
+<line x1="60" y1="50.0" x2="590" y2="50.0" stroke="#ddd"/><text x="52" y="54.0" text-anchor="end" fill="#555">70</text>
+<text x="60.0" y="348" text-anchor="middle" fill="#555">0</text>
+<text x="126.2" y="348" text-anchor="middle" fill="#555">500</text>
+<text x="192.5" y="348" text-anchor="middle" fill="#555">1000</text>
+<text x="258.8" y="348" text-anchor="middle" fill="#555">1500</text>
+<text x="325.0" y="348" text-anchor="middle" fill="#555">2000</text>
+<text x="391.2" y="348" text-anchor="middle" fill="#555">2500</text>
+<text x="457.5" y="348" text-anchor="middle" fill="#555">3000</text>
+<text x="523.8" y="348" text-anchor="middle" fill="#555">3500</text>
+<text x="590.0" y="348" text-anchor="middle" fill="#555">4000</text>
+<text x="325.0" y="372" text-anchor="middle" fill="#555">학습 스텝</text><text x="16" y="190.0" fill="#555" transform="rotate(-90 16 190.0)" text-anchor="middle">ETH3D 통과율(%)</text>
+<line x1="60" y1="279.0" x2="590" y2="279.0" stroke="#111" stroke-width="1" stroke-dasharray="1 3"/><text x="66" y="274.0" fill="#777">학습 전 29.1</text>
+<polyline fill="none" stroke="#111" stroke-width="2" stroke-dasharray="" points="60.0,279.0 126.2,230.9 192.5,232.6"/>
+<circle cx="60.0" cy="279.0" r="2.6" fill="#111"/>
+<circle cx="126.2" cy="230.9" r="2.6" fill="#111"/>
+<circle cx="192.5" cy="232.6" r="2.6" fill="#111"/>
+<polyline fill="none" stroke="#666" stroke-width="2" stroke-dasharray="6 4" points="60.0,279.0 126.2,221.4 192.5,222.5"/>
+<circle cx="60.0" cy="279.0" r="2.6" fill="#666"/>
+<circle cx="126.2" cy="221.4" r="2.6" fill="#666"/>
+<circle cx="192.5" cy="222.5" r="2.6" fill="#666"/>
+<polyline fill="none" stroke="#111" stroke-width="2" stroke-dasharray="2 3" points="60.0,279.0 126.2,211.8 192.5,202.3"/>
+<circle cx="60.0" cy="279.0" r="2.6" fill="#111"/>
+<circle cx="126.2" cy="211.8" r="2.6" fill="#111"/>
+<circle cx="192.5" cy="202.3" r="2.6" fill="#111"/>
+<polyline fill="none" stroke="#666" stroke-width="2" stroke-dasharray="10 3 2 3" points="60.0,279.0 126.2,201.2 192.5,190.0 258.8,151.9 325.0,161.4"/>
+<circle cx="60.0" cy="279.0" r="2.6" fill="#666"/>
+<circle cx="126.2" cy="201.2" r="2.6" fill="#666"/>
+<circle cx="192.5" cy="190.0" r="2.6" fill="#666"/>
+<circle cx="258.8" cy="151.9" r="2.6" fill="#666"/>
+<circle cx="325.0" cy="161.4" r="2.6" fill="#666"/>
+<polyline fill="none" stroke="#111" stroke-width="2" stroke-dasharray="1 5" points="60.0,279.0 126.2,197.8 192.5,200.1 258.8,137.9 325.0,129.0 391.2,131.2 457.5,144.1 523.8,131.8 590.0,131.2"/>
+<circle cx="60.0" cy="279.0" r="2.6" fill="#111"/>
+<circle cx="126.2" cy="197.8" r="2.6" fill="#111"/>
+<circle cx="192.5" cy="200.1" r="2.6" fill="#111"/>
+<circle cx="258.8" cy="137.9" r="2.6" fill="#111"/>
+<circle cx="325.0" cy="129.0" r="2.6" fill="#111"/>
+<circle cx="391.2" cy="131.2" r="2.6" fill="#111"/>
+<circle cx="457.5" cy="144.1" r="2.6" fill="#111"/>
+<circle cx="523.8" cy="131.8" r="2.6" fill="#111"/>
+<circle cx="590.0" cy="131.2" r="2.6" fill="#111"/>
+<text x="598" y="135.2" fill="#111">pano8 kd 0, 4천 55.5</text>
+<text x="598" y="165.4" fill="#666">pano7 kd 0, 2천 50.1</text>
+<text x="598" y="206.3" fill="#111">pano6 kd 0 42.8</text>
+<text x="598" y="226.5" fill="#666">pano4 kd 0.05 39.2</text>
+<text x="598" y="240.5" fill="#111">pano3 kd 0.2 37.4</text>
+</svg>

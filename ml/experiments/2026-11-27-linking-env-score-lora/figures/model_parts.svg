@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="13">
+  <rect width="980" height="470" fill="#fff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
+    <pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#111" stroke-width="2"/></pattern>
+  </defs>
+  <text x="20" y="30" font-size="17" font-weight="bold" fill="#111">학습마다 모델의 어느 부분을 바꿨나</text>
+  <text x="20" y="52" fill="#555">빗금 친 칸이 학습한 부분이고, 나머지는 고정이에요.</text>
+
+  <!-- 공통 구조 -->
+  <rect x="20" y="80" width="80" height="50" fill="none" stroke="#111"/><text x="60" y="101" text-anchor="middle">사진</text><text x="60" y="119" text-anchor="middle" fill="#555" font-size="11">322×322</text>
+  <line x1="100" y1="105" x2="125" y2="105" stroke="#111" marker-end="url(#a)"/>
+  <g>
+    <rect x="130" y="80" width="40" height="50" fill="none" stroke="#111"/><text x="150" y="110" text-anchor="middle" font-size="11">1</text>
+    <rect x="175" y="80" width="40" height="50" fill="none" stroke="#111"/><text x="195" y="110" text-anchor="middle" font-size="11">2</text>
+    <text x="240" y="110" text-anchor="middle">…</text>
+    <rect x="265" y="80" width="40" height="50" fill="none" stroke="#111"/><text x="285" y="110" text-anchor="middle" font-size="11">8</text>
+    <rect x="310" y="80" width="40" height="50" fill="none" stroke="#111"/><text x="330" y="110" text-anchor="middle" font-size="11">9</text>
+    <rect x="355" y="80" width="40" height="50" fill="none" stroke="#111"/><text x="375" y="110" text-anchor="middle" font-size="11">10</text>
+    <rect x="400" y="80" width="40" height="50" fill="none" stroke="#111"/><text x="420" y="110" text-anchor="middle" font-size="11">11</text>
+    <rect x="445" y="80" width="40" height="50" fill="none" stroke="#111"/><text x="465" y="110" text-anchor="middle" font-size="11">12</text>
+  </g>
+  <text x="307" y="150" text-anchor="middle" fill="#555" font-size="12">DINOv2 ViT-B/14 백본 블록 12개</text>
+  <line x1="485" y1="105" x2="530" y2="105" stroke="#111" marker-end="url(#a)"/>
+  <rect x="535" y="80" width="120" height="50" fill="none" stroke="#111"/><text x="595" y="101" text-anchor="middle">조각 특징</text><text x="595" y="119" text-anchor="middle" fill="#555" font-size="11">529개 × 768차원</text>
+  <line x1="655" y1="95" x2="700" y2="80" stroke="#111" marker-end="url(#a)"/>
+  <line x1="655" y1="115" x2="700" y2="130" stroke="#111" marker-end="url(#a)"/>
+  <rect x="705" y="58" width="255" height="40" fill="none" stroke="#111"/><text x="832" y="83" text-anchor="middle">MegaLoc 요약층 → 벡터 하나(8,448차원)</text>
+  <rect x="705" y="112" width="255" height="40" fill="none" stroke="#111"/><text x="832" y="137" text-anchor="middle">같은 환경 점수(조각끼리 비교)</text>
+
+  <!-- 실험별 -->
+  <g font-size="12">
+    <text x="20" y="200" font-weight="bold">1. e3 가림 증류, run1 식당 영상, 파노라마 LoRA(pano, g, q, f)</text>
+    <rect x="310" y="210" width="175" height="30" fill="url(#h)" stroke="#111"/>
+    <text x="500" y="230">9~12번 블록 attention(qkv)에 LoRA rank 8, 학습 숫자 98,304개 (pano5만 5~12번 8블록)</text>
+
+    <text x="20" y="275" font-weight="bold">2. DINOv2 튜닝(위키 명소 48곳)</text>
+    <rect x="400" y="285" width="85" height="30" fill="url(#h)" stroke="#111"/>
+    <rect x="535" y="285" width="120" height="30" fill="url(#h)" stroke="#111"/>
+    <text x="670" y="305">11~12번 블록 전체 + GeM 풀링 + 256차원 투영</text>
+
+    <text x="20" y="350" font-weight="bold">3. ETH3D 층 추가</text>
+    <rect x="705" y="360" width="255" height="30" fill="url(#h)" stroke="#111"/>
+    <text x="410" y="380">MegaLoc 벡터 위에 2층 신경망(1,024 → 512)만 →</text>
+
+    <text x="20" y="425" font-weight="bold">4. run_h0 변환층</text>
+    <rect x="535" y="435" width="120" height="25" fill="url(#h)" stroke="#111"/>
+    <text x="670" y="452">조각 특징 위에 잔차 변환층(은닉 256)만</text>
+  </g>
+</svg>
