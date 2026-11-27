@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="12"><rect width="760" height="360" fill="#fff"/>
+<text x="60" y="28" font-size="15" font-weight="bold" fill="#111">큐 추가 전후: 90~120°</text>
+<line x1="60" y1="310.0" x2="590" y2="310.0" stroke="#e3e3e3"/><text x="52" y="314.0" text-anchor="end" fill="#555">30</text>
+<line x1="60" y1="245.0" x2="590" y2="245.0" stroke="#e3e3e3"/><text x="52" y="249.0" text-anchor="end" fill="#555">40</text>
+<line x1="60" y1="180.0" x2="590" y2="180.0" stroke="#e3e3e3"/><text x="52" y="184.0" text-anchor="end" fill="#555">50</text>
+<line x1="60" y1="115.0" x2="590" y2="115.0" stroke="#e3e3e3"/><text x="52" y="119.0" text-anchor="end" fill="#555">60</text>
+<line x1="60" y1="50.0" x2="590" y2="50.0" stroke="#e3e3e3"/><text x="52" y="54.0" text-anchor="end" fill="#555">70</text>
+<text x="60.0" y="328" text-anchor="middle" fill="#555">0</text>
+<text x="192.5" y="328" text-anchor="middle" fill="#555">500</text>
+<text x="325.0" y="328" text-anchor="middle" fill="#555">1000</text>
+<text x="457.5" y="328" text-anchor="middle" fill="#555">1500</text>
+<text x="590.0" y="328" text-anchor="middle" fill="#555">2000</text>
+<text x="325.0" y="352" text-anchor="middle" fill="#555">학습 스텝</text><text x="16" y="180.0" fill="#555" transform="rotate(-90 16 180.0)" text-anchor="middle">ETH3D 통과율(%)</text>
+<line x1="60" y1="269.7" x2="590" y2="269.7" stroke="#999" stroke-dasharray="1 3"/><text x="66" y="263.7" fill="#777">학습 전 36.2</text>
+<polyline fill="none" stroke="#111" stroke-width="2.2" stroke-dasharray="" points="60.0,269.7 192.5,178.1 325.0,145.5 457.5,157.2 590.0,154.0"/>
+<circle cx="60.0" cy="269.7" r="3" fill="#111"/>
+<circle cx="192.5" cy="178.1" r="3" fill="#111"/>
+<circle cx="325.0" cy="145.5" r="3" fill="#111"/>
+<circle cx="457.5" cy="157.2" r="3" fill="#111"/>
+<circle cx="590.0" cy="154.0" r="3" fill="#111"/>
+<polyline fill="none" stroke="#111" stroke-width="2.2" stroke-dasharray="7 4" points="60.0,269.7 192.5,181.3 325.0,139.1 457.5,154.0 590.0,83.1"/>
+<circle cx="60.0" cy="269.7" r="3" fill="#111"/>
+<circle cx="192.5" cy="181.3" r="3" fill="#111"/>
+<circle cx="325.0" cy="139.1" r="3" fill="#111"/>
+<circle cx="457.5" cy="154.0" r="3" fill="#111"/>
+<circle cx="590.0" cy="83.1" r="3" fill="#111"/>
+<polyline fill="none" stroke="#777" stroke-width="2.2" stroke-dasharray="" points="60.0,269.7 192.5,142.9 325.0,116.3 457.5,92.2 590.0,100.7"/>
+<circle cx="60.0" cy="269.7" r="3" fill="#777"/>
+<circle cx="192.5" cy="142.9" r="3" fill="#777"/>
+<circle cx="325.0" cy="116.3" r="3" fill="#777"/>
+<circle cx="457.5" cy="92.2" r="3" fill="#777"/>
+<circle cx="590.0" cy="100.7" r="3" fill="#777"/>
+<text x="598" y="87.1" fill="#111">q0 큐 시드0 64.9</text>
+<text x="598" y="104.7" fill="#777">q1 큐 시드1 62.2</text>
+<text x="598" y="158.0" fill="#111">g0 큐 없음 54.0</text>
+</svg>
