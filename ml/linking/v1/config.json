@@ -1,0 +1,25 @@
+{
+  "name": "linking-env-v1",
+  "confirmed": "2026-11-28",
+  "base_model": {
+    "name": "MegaLoc (DINOv2 ViT-B/14 + aggregator)",
+    "file": "model.safetensors",
+    "sha256": "d4f9f2bcb60018f91eb6a8e061ed054fd55654e10c2569cf13841ea986ffb4f8"
+  },
+  "lora": {
+    "source_run": "run_f1 seed 0, step 2000",
+    "file": "linking_v1_lora.ckpt",
+    "sha256": "79dea0b3dd39fd2df1e38380497910d08ccd071d6dc35cb1b99d56845248433a",
+    "blocks": "last 4 (9-12), attn.qkv",
+    "rank": 8,
+    "alpha": 16,
+    "scale": 2.0
+  },
+  "input": {"size": 322, "patch": 14, "grid": 23, "person_mask": "macOS Vision person segmentation, patch masked if > 50% person"},
+  "score": "same-environment score: chamfer similarity of patch features, person patches excluded",
+  "router": {
+    "direct_threshold": 0.611,
+    "bridge_threshold": 0.631,
+    "ask": {"mutual_top1": true, "min_gap": 0.03, "min_score": 0.0, "auto_link": false}
+  }
+}

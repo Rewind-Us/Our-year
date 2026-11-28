@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="13">
+  <rect width="980" height="360" fill="#fff"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
+  <pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#111" stroke-width="1.5"/></pattern></defs>
+  <text x="20" y="30" font-size="17" font-weight="bold">잇기 v1: 사진 묶음에서 같은 공간을 찾는 순서</text>
+  <text x="20" y="52" fill="#555">빗금 칸이 v1에서 확정한 부분이에요. 숫자는 config.json에 있고, 코드를 고치지 않고 바꿀 수 있어요.</text>
+  <rect x="20" y="80" width="140" height="80" fill="none" stroke="#111"/><text x="90" y="112" text-anchor="middle">촬영 시각으로</text><text x="90" y="132" text-anchor="middle">후보 묶음 만들기</text><text x="90" y="150" text-anchor="middle" fill="#555" font-size="11">(앱, 서버 쪽)</text>
+  <line x1="160" y1="120" x2="190" y2="120" stroke="#111" marker-end="url(#a)"/>
+  <rect x="195" y="80" width="140" height="80" fill="none" stroke="#111"/><text x="265" y="112" text-anchor="middle">사람 마스크</text><text x="265" y="132" text-anchor="middle" fill="#555" font-size="11">사람 조각은 점수에서 빼요</text>
+  <line x1="335" y1="120" x2="365" y2="120" stroke="#111" marker-end="url(#a)"/>
+  <rect x="370" y="80" width="180" height="80" fill="url(#h)" stroke="#111"/><rect x="380" y="90" width="160" height="60" fill="#fff" stroke="none"/>
+  <text x="460" y="110" text-anchor="middle">MegaLoc + LoRA v1</text><text x="460" y="128" text-anchor="middle" fill="#555" font-size="11">run_f1 시드 0, 2,000스텝</text><text x="460" y="144" text-anchor="middle" fill="#555" font-size="11">322×322 → 조각 529개</text>
+  <line x1="550" y1="120" x2="580" y2="120" stroke="#111" marker-end="url(#a)"/>
+  <rect x="585" y="80" width="160" height="80" fill="none" stroke="#111"/><text x="665" y="112" text-anchor="middle">같은 환경 점수</text><text x="665" y="132" text-anchor="middle" fill="#555" font-size="11">모든 사진 쌍마다</text><text x="665" y="148" text-anchor="middle" fill="#555" font-size="11">조각끼리 chamfer</text>
+  <line x1="745" y1="120" x2="775" y2="120" stroke="#111" marker-end="url(#a)"/>
+  <rect x="780" y="80" width="180" height="80" fill="url(#h)" stroke="#111"/><rect x="790" y="90" width="160" height="60" fill="#fff" stroke="none"/>
+  <text x="870" y="112" text-anchor="middle">라우터 v2 판정</text><text x="870" y="132" text-anchor="middle" fill="#555" font-size="11">config.json 기준값</text>
+  <line x1="870" y1="160" x2="870" y2="195" stroke="#111" marker-end="url(#a)"/>
+  <rect x="20" y="200" width="300" height="120" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="170" y="226" text-anchor="middle" font-weight="bold">자동 연결</text>
+  <text x="40" y="252">직접: 점수 &gt; 0.611</text>
+  <text x="40" y="274">다리: 다른 사진 k와 양쪽 모두 &gt; 0.631</text>
+  <text x="40" y="304" fill="#555" font-size="12">이어진 사진들을 묶어 "같은 공간" 하나로 보여 줘요</text>
+  <rect x="340" y="200" width="300" height="120" fill="none" stroke="#111" stroke-dasharray="5 3"/>
+  <text x="490" y="226" text-anchor="middle" font-weight="bold">확인 질문</text>
+  <text x="360" y="252">서로 1등이고 각자 2등과 0.03 이상 차이</text>
+  <text x="360" y="274">"같은 곳에서 찍었나요?"</text>
+  <text x="360" y="304" fill="#555" font-size="12">자동으로 잇지 않아요</text>
+  <rect x="660" y="200" width="300" height="120" fill="none" stroke="#bbb"/>
+  <text x="810" y="226" text-anchor="middle" font-weight="bold">연결 안 함</text>
+  <text x="680" y="260" fill="#555" font-size="12">나머지 쌍</text>
+  <text x="20" y="348" fill="#555" font-size="12">주의: 묶음 단위로 이어 붙이기 때문에, 시간으로 좁히지 않은 큰 사진 모음에 그대로 돌리면 다른 가게끼리 한 묶음이 될 수 있어요.</text>
+</svg>
