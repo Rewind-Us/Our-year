@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="12">
+<rect width="980" height="520" fill="#fff"/>
+<text x="20" y="30" font-size="17" font-weight="bold">처음 보는 사진으로 확인: run_f1 시드 0, 설정 변경 없음</text>
+<text x="20" y="52" fill="#555">검은 점은 같은 장소 점수(기준값보다 오른쪽이어야 함), 흰 점은 다른 장소와의 최고점(왼쪽이어야 함)이에요.</text>
+<line x1="330.0" y1="75" x2="330.0" y2="468" stroke="#eee"/><text x="330.0" y="486" text-anchor="middle" fill="#555">0.4</text>
+<line x1="456.7" y1="75" x2="456.7" y2="468" stroke="#eee"/><text x="456.7" y="486" text-anchor="middle" fill="#555">0.5</text>
+<line x1="583.3" y1="75" x2="583.3" y2="468" stroke="#eee"/><text x="583.3" y="486" text-anchor="middle" fill="#555">0.6</text>
+<line x1="710.0" y1="75" x2="710.0" y2="468" stroke="#eee"/><text x="710.0" y="486" text-anchor="middle" fill="#555">0.7</text>
+<line x1="836.7" y1="75" x2="836.7" y2="468" stroke="#eee"/><text x="836.7" y="486" text-anchor="middle" fill="#555">0.8</text>
+<line x1="597.3" y1="70" x2="597.3" y2="468" stroke="#111" stroke-width="1.5"/>
+<line x1="622.6" y1="70" x2="622.6" y2="468" stroke="#111" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="593.3" y="68" text-anchor="end">직접 0.611</text><text x="626.6" y="68">다리 0.631</text>
+<text x="314" y="104" text-anchor="end">포토부스 1 (사람 57~74%)</text><line x1="330" y1="100" x2="900" y2="100" stroke="#f3f3f3"/>
+<circle cx="623.9" cy="100" r="7" fill="#111" stroke="#111" stroke-width="1.5"/><text x="635.9" y="104">0.632</text>
+<text x="314" y="146" text-anchor="end">포토부스 2 (작은 거울 속)</text><line x1="330" y1="142" x2="900" y2="142" stroke="#f3f3f3"/>
+<circle cx="621.3" cy="142" r="7" fill="#111" stroke="#111" stroke-width="1.5"/><text x="633.3" y="146">0.630</text>
+<text x="314" y="188" text-anchor="end">방 거울 셀카</text><line x1="330" y1="184" x2="900" y2="184" stroke="#f3f3f3"/>
+<circle cx="706.2" cy="184" r="7" fill="#111" stroke="#111" stroke-width="1.5"/><text x="718.2" y="188">0.697</text>
+<text x="314" y="230" text-anchor="end">화장실 거울 셀카</text><line x1="330" y1="226" x2="900" y2="226" stroke="#f3f3f3"/>
+<circle cx="830.3" cy="226" r="7" fill="#111" stroke="#111" stroke-width="1.5"/><text x="842.3" y="230">0.795</text>
+<text x="314" y="272" text-anchor="end">식당 13장: 같은 쪽 쌍 중간값</text><line x1="330" y1="268" x2="900" y2="268" stroke="#f3f3f3"/>
+<circle cx="858.2" cy="268" r="7" fill="#111" stroke="#111" stroke-width="1.5"/><text x="870.2" y="272">0.817</text>
+<text x="314" y="314" text-anchor="end">식당 13장: 반대쪽 쌍 중간값</text><line x1="330" y1="310" x2="900" y2="310" stroke="#f3f3f3"/>
+<circle cx="571.9" cy="310" r="7" fill="#111" stroke="#111" stroke-width="1.5"/><text x="583.9" y="314">0.591</text>
+<text x="314" y="356" text-anchor="end">식당 13장과 다른 장소 최고점</text><line x1="330" y1="352" x2="900" y2="352" stroke="#f3f3f3"/>
+<circle cx="525.1" cy="352" r="7" fill="#fff" stroke="#111" stroke-width="1.5"/><text x="537.1" y="356">0.554</text>
+<text x="314" y="398" text-anchor="end">포토부스 1과 2 사이 최고점</text><line x1="330" y1="394" x2="900" y2="394" stroke="#f3f3f3"/>
+<circle cx="370.5" cy="394" r="7" fill="#fff" stroke="#111" stroke-width="1.5"/><text x="382.5" y="398">0.432</text>
+<text x="314" y="440" text-anchor="end">카페 한 장과 다른 장소 최고점</text><line x1="330" y1="436" x2="900" y2="436" stroke="#f3f3f3"/>
+<circle cx="563.1" cy="436" r="7" fill="#fff" stroke="#111" stroke-width="1.5"/><text x="575.1" y="440">0.584</text>
+<text x="20" y="508" fill="#555">식당 반대쪽 쌍은 중간값이 기준값보다 낮지만, 다리 1장을 거쳐 13장 모두 한 묶음으로 이어졌어요(78쌍 중 69쌍 연결).</text></svg>
