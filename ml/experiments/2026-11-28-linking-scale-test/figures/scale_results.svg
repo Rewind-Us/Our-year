@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="12">
+<rect width="980" height="520" fill="#fff"/>
+<text x="20" y="30" font-size="17" font-weight="bold">348장 시험: 시간으로 나누면 섞임이 사라지고, 시계가 30분 넘게 어긋나면 못 이어요</text>
+<text x="20" y="66" font-weight="bold">방식별 정밀 비교 쌍 수와 섞인 묶음</text>
+<text x="20" y="106">전부 비교, 시간 무시</text><rect x="20" y="112" width="230" height="16" fill="#555"/><text x="258" y="125">60,378쌍</text>
+<text x="330" y="125" font-weight="bold">섞인 묶음 4</text>
+<text x="20" y="164">전역 상위 10, 시간 무시</text><rect x="20" y="170" width="162" height="16" fill="#555"/><text x="190" y="183">2,288쌍</text>
+<text x="330" y="183" font-weight="bold">섞인 묶음 4</text>
+<text x="20" y="222">시간 사건 + 상위 10</text><rect x="20" y="228" width="154" height="16" fill="#555"/><text x="182" y="241">1,579쌍</text>
+<text x="330" y="241" font-weight="bold">섞인 묶음 0</text>
+<text x="20" y="280">시간 사건 + 상위 10 (최악 배치)</text><rect x="20" y="286" width="160" height="16" fill="#555"/><text x="188" y="299">2,102쌍</text>
+<text x="330" y="299" font-weight="bold">섞인 묶음 0</text>
+<text x="20" y="335" fill="#555" font-size="11">막대 길이는 로그 눈금이에요. 네 방식 모두 실사진 장소 13/17을 통째로 묶었어요.</text>
+<text x="520" y="66" font-weight="bold">친구 휴대폰 시계가 늦을 때, 두 사람이 이어진 실사진 장소(17곳 중)</text>
+<line x1="520" y1="320" x2="940" y2="320" stroke="#eee"/><text x="514" y="324" text-anchor="end" fill="#555">0</text>
+<line x1="520" y1="252" x2="940" y2="252" stroke="#eee"/><text x="514" y="256" text-anchor="end" fill="#555">5</text>
+<line x1="520" y1="185" x2="940" y2="185" stroke="#eee"/><text x="514" y="189" text-anchor="end" fill="#555">10</text>
+<line x1="520" y1="117" x2="940" y2="117" stroke="#eee"/><text x="514" y="121" text-anchor="end" fill="#555">15</text>
+<polyline fill="none" stroke="#111" stroke-width="2" points="520,144 604,144 688,144 772,293 856,293 940,320"/>
+<circle cx="520" cy="144" r="4" fill="#111"/><text x="520" y="338" text-anchor="middle" fill="#555">0분</text><text x="526" y="136">13</text>
+<circle cx="604" cy="144" r="4" fill="#111"/><text x="604" y="338" text-anchor="middle" fill="#555">10분</text><text x="610" y="136">13</text>
+<circle cx="688" cy="144" r="4" fill="#111"/><text x="688" y="338" text-anchor="middle" fill="#555">20분</text><text x="694" y="136">13</text>
+<circle cx="772" cy="293" r="4" fill="#111"/><text x="772" y="338" text-anchor="middle" fill="#555">45분</text><text x="778" y="285">2</text>
+<circle cx="856" cy="293" r="4" fill="#111"/><text x="856" y="338" text-anchor="middle" fill="#555">90분</text><text x="862" y="285">2</text>
+<circle cx="940" cy="320" r="4" fill="#111"/><text x="940" y="338" text-anchor="middle" fill="#555">600분</text><text x="946" y="312">0</text>
+<line x1="722" y1="90" x2="722" y2="320" stroke="#111" stroke-dasharray="4 3"/><text x="726" y="102" font-size="11">겹침 여유 30분</text>
+<text x="520" y="364" fill="#555" font-size="11">시간대가 9시간 어긋난 경우(UTC로 저장)도 0곳이에요. 시각을 UTC로 맞추는 처리가 꼭 필요해요.</text>
+<text x="20" y="410" font-weight="bold">그 밖의 경우</text>
+<text x="20" y="434">같은 카페를 친구가 3일 뒤에 찍음: 이어지지 않음(같은 순간이 아니므로 의도대로)</text>
+<text x="20" y="456">친구 사진 8장의 촬영 시각이 없음(카톡 전달 가정): 그 사진은 비교하지 않고 "시각 없음"으로 돌려줌, 다른 장소에는 영향 없음</text>
+<text x="20" y="490" fill="#555" font-size="11">방해 사진은 시험용 파노라마 48개에서 자른 288장이라 실제 카메라롤보다 쉬울 수 있어요. 두 사람의 실제 하루치 사진으로 다시 확인해야 해요.</text></svg>

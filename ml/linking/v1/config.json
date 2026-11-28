@@ -15,11 +15,27 @@
     "alpha": 16,
     "scale": 2.0
   },
-  "input": {"size": 322, "patch": 14, "grid": 23, "person_mask": "macOS Vision person segmentation, patch masked if > 50% person"},
+  "input": {
+    "size": 322,
+    "patch": 14,
+    "grid": 23,
+    "person_mask": "macOS Vision person segmentation, patch masked if > 50% person"
+  },
   "score": "same-environment score: chamfer similarity of patch features, person patches excluded",
   "router": {
     "direct_threshold": 0.611,
     "bridge_threshold": 0.631,
-    "ask": {"mutual_top1": true, "min_gap": 0.03, "min_score": 0.0, "auto_link": false}
+    "ask": {
+      "mutual_top1": true,
+      "min_gap": 0.03,
+      "min_score": 0.0,
+      "auto_link": false
+    }
+  },
+  "pipeline": {
+    "event_gap_min": 120,
+    "cross_tolerance_min": 30,
+    "top_k": 10,
+    "note": "사건 간격 60~240분에서 결과가 같았어요(2026-11-28, 348장 시험). 실제 두 사람 사진으로 다시 확인해야 해요."
   }
 }
