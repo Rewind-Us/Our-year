@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="12">
+<rect width="980" height="470" fill="#fff"/>
+<text x="20" y="30" font-size="17" font-weight="bold">ETH3D 120~180°: run_f1은 시드 3개 모두 run_g0 설정보다 높아요</text>
+<text x="20" y="52" fill="#555">가장 어려운 구간(방향이 120° 넘게 다른 같은 장면)의 정답률 %, 500스텝마다 평가</text>
+<line x1="70" y1="380.0" x2="800" y2="380.0" stroke="#eee"/><text x="62" y="384.0" text-anchor="end" fill="#555">20</text>
+<line x1="70" y1="320.0" x2="800" y2="320.0" stroke="#eee"/><text x="62" y="324.0" text-anchor="end" fill="#555">30</text>
+<line x1="70" y1="260.0" x2="800" y2="260.0" stroke="#eee"/><text x="62" y="264.0" text-anchor="end" fill="#555">40</text>
+<line x1="70" y1="200.0" x2="800" y2="200.0" stroke="#eee"/><text x="62" y="204.0" text-anchor="end" fill="#555">50</text>
+<line x1="70" y1="140.0" x2="800" y2="140.0" stroke="#eee"/><text x="62" y="144.0" text-anchor="end" fill="#555">60</text>
+<line x1="70" y1="80.0" x2="800" y2="80.0" stroke="#eee"/><text x="62" y="84.0" text-anchor="end" fill="#555">70</text>
+<text x="70.0" y="400" text-anchor="middle" fill="#555">0</text>
+<text x="252.5" y="400" text-anchor="middle" fill="#555">500</text>
+<text x="435.0" y="400" text-anchor="middle" fill="#555">1000</text>
+<text x="617.5" y="400" text-anchor="middle" fill="#555">1500</text>
+<text x="800.0" y="400" text-anchor="middle" fill="#555">2000</text>
+<text x="435.0" y="420" text-anchor="middle" fill="#555">학습 스텝</text>
+<line x1="70" y1="380" x2="800" y2="380" stroke="#111"/><line x1="70" y1="80" x2="70" y2="380" stroke="#111"/>
+<polyline fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="6 4" points="70.0,325.4 252.5,242.6 435.0,206.6 617.5,211.4 800.0,213.8"/>
+<circle cx="70.0" cy="325.4" r="2.5" fill="#999"/>
+<circle cx="252.5" cy="242.6" r="2.5" fill="#999"/>
+<circle cx="435.0" cy="206.6" r="2.5" fill="#999"/>
+<circle cx="617.5" cy="211.4" r="2.5" fill="#999"/>
+<circle cx="800.0" cy="213.8" r="2.5" fill="#999"/>
+<polyline fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="6 4" points="70.0,325.4 252.5,253.4 435.0,236.0 617.5,243.2 800.0,236.0"/>
+<circle cx="70.0" cy="325.4" r="2.5" fill="#999"/>
+<circle cx="252.5" cy="253.4" r="2.5" fill="#999"/>
+<circle cx="435.0" cy="236.0" r="2.5" fill="#999"/>
+<circle cx="617.5" cy="243.2" r="2.5" fill="#999"/>
+<circle cx="800.0" cy="236.0" r="2.5" fill="#999"/>
+<polyline fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="6 4" points="70.0,325.4 252.5,301.4 435.0,278.0 617.5,273.2 800.0,259.4"/>
+<circle cx="70.0" cy="325.4" r="2.5" fill="#999"/>
+<circle cx="252.5" cy="301.4" r="2.5" fill="#999"/>
+<circle cx="435.0" cy="278.0" r="2.5" fill="#999"/>
+<circle cx="617.5" cy="273.2" r="2.5" fill="#999"/>
+<circle cx="800.0" cy="259.4" r="2.5" fill="#999"/>
+<polyline fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="2 3" points="70.0,325.4 252.5,274.4 435.0,263.6 617.5,277.4 800.0,262.4"/>
+<circle cx="70.0" cy="325.4" r="2.5" fill="#111"/>
+<circle cx="252.5" cy="274.4" r="2.5" fill="#111"/>
+<circle cx="435.0" cy="263.6" r="2.5" fill="#111"/>
+<circle cx="617.5" cy="277.4" r="2.5" fill="#111"/>
+<circle cx="800.0" cy="262.4" r="2.5" fill="#111"/>
+<polyline fill="none" stroke="#111" stroke-width="2" points="70.0,325.4 252.5,191.0 435.0,168.2 617.5,168.8 800.0,164.0"/>
+<circle cx="70.0" cy="325.4" r="2.5" fill="#111"/>
+<circle cx="252.5" cy="191.0" r="2.5" fill="#111"/>
+<circle cx="435.0" cy="168.2" r="2.5" fill="#111"/>
+<circle cx="617.5" cy="168.8" r="2.5" fill="#111"/>
+<circle cx="800.0" cy="164.0" r="2.5" fill="#111"/>
+<polyline fill="none" stroke="#111" stroke-width="2" points="70.0,325.4 252.5,155.6 435.0,203.0 617.5,194.6 800.0,189.8"/>
+<circle cx="70.0" cy="325.4" r="2.5" fill="#111"/>
+<circle cx="252.5" cy="155.6" r="2.5" fill="#111"/>
+<circle cx="435.0" cy="203.0" r="2.5" fill="#111"/>
+<circle cx="617.5" cy="194.6" r="2.5" fill="#111"/>
+<circle cx="800.0" cy="189.8" r="2.5" fill="#111"/>
+<polyline fill="none" stroke="#111" stroke-width="2" points="70.0,325.4 252.5,183.2 435.0,134.0 617.5,119.0 800.0,116.0"/>
+<circle cx="70.0" cy="325.4" r="2.5" fill="#111"/>
+<circle cx="252.5" cy="183.2" r="2.5" fill="#111"/>
+<circle cx="435.0" cy="134.0" r="2.5" fill="#111"/>
+<circle cx="617.5" cy="119.0" r="2.5" fill="#111"/>
+<circle cx="800.0" cy="116.0" r="2.5" fill="#111"/>
+<text x="810" y="120.0" fill="#111">run_f1 시드 2 64.0</text>
+<text x="810" y="168.0" fill="#111">run_f1 시드 0 56.0</text>
+<text x="810" y="193.8" fill="#111">run_f1 시드 1 51.7</text>
+<text x="810" y="217.8" fill="#999">run_g0 47.7</text>
+<text x="810" y="240.0" fill="#999">run_g1 44.0</text>
+<text x="810" y="263.4" fill="#999">run_g2 40.1</text>
+<text x="810" y="278.4" fill="#111">run_f0 39.6</text>
+<text x="20" y="458" fill="#555">실선: run_f1(식당, 카페, 야외 추가) 시드 3개. 점선: run_f0(실내 음식점만). 회색 파선: run_g0 설정 시드 3개(11/27).</text></svg>

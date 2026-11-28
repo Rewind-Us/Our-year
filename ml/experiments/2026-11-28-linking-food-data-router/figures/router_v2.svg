@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 330" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="13">
+  <rect width="980" height="330" fill="#fff"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker></defs>
+  <text x="20" y="30" font-size="17" font-weight="bold">라우터 v2: 두 사진을 어떻게 판정하나</text>
+  <text x="20" y="52" fill="#555">같은 시간대 후보 묶음 안에서, 사진 두 장마다 왼쪽부터 차례로 확인해요.</text>
+  <rect x="20" y="80" width="190" height="80" fill="none" stroke="#111"/>
+  <text x="115" y="112" text-anchor="middle">1. 직접 판정</text><text x="115" y="134" text-anchor="middle" fill="#555" font-size="12">점수 &gt; 기준값 T</text>
+  <line x1="210" y1="120" x2="265" y2="120" stroke="#111" marker-end="url(#a)"/><text x="237" y="112" text-anchor="middle" fill="#555" font-size="11">아니면</text>
+  <rect x="270" y="80" width="220" height="80" fill="none" stroke="#111"/>
+  <text x="380" y="106" text-anchor="middle">2. 다리 1장</text><text x="380" y="128" text-anchor="middle" fill="#555" font-size="12">다른 사진 k와 양쪽 모두</text><text x="380" y="146" text-anchor="middle" fill="#555" font-size="12">&gt; T + 0.02 (기존 +0.01)</text>
+  <line x1="490" y1="120" x2="545" y2="120" stroke="#111" marker-end="url(#a)"/><text x="517" y="112" text-anchor="middle" fill="#555" font-size="11">아니면</text>
+  <rect x="550" y="80" width="230" height="80" fill="none" stroke="#111" stroke-dasharray="5 3"/>
+  <text x="665" y="106" text-anchor="middle">3. 상대 순위 (새로 추가)</text><text x="665" y="128" text-anchor="middle" fill="#555" font-size="12">서로 1등이고 각자 2등과</text><text x="665" y="146" text-anchor="middle" fill="#555" font-size="12">0.03 이상 차이</text>
+  <line x1="780" y1="120" x2="835" y2="120" stroke="#111" marker-end="url(#a)"/><text x="807" y="112" text-anchor="middle" fill="#555" font-size="11">아니면</text>
+  <rect x="840" y="95" width="120" height="50" fill="none" stroke="#111"/><text x="900" y="125" text-anchor="middle">연결 안 함</text>
+  <line x1="115" y1="160" x2="115" y2="215" stroke="#111" marker-end="url(#a)"/>
+  <line x1="380" y1="160" x2="380" y2="215" stroke="#111" marker-end="url(#a)"/>
+  <line x1="665" y1="160" x2="665" y2="215" stroke="#111" marker-end="url(#a)"/>
+  <rect x="20" y="220" width="470" height="60" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="255" y="246" text-anchor="middle" font-weight="bold">자동 연결</text><text x="255" y="266" text-anchor="middle" fill="#555" font-size="12">사용자에게 묻지 않고 같은 공간으로 묶어요</text>
+  <rect x="550" y="220" width="230" height="60" fill="none" stroke="#111" stroke-dasharray="5 3"/>
+  <text x="665" y="246" text-anchor="middle" font-weight="bold">확인 질문</text><text x="665" y="266" text-anchor="middle" fill="#555" font-size="12">"같은 곳에서 찍었나요?"</text>
+  <text x="20" y="310" fill="#555" font-size="12">상대 순위는 후보가 적으면 오탐이 정답보다 많아서(후보 5장: 정답 165, 오탐 564) 자동 연결에 쓰지 않아요.</text>
+</svg>

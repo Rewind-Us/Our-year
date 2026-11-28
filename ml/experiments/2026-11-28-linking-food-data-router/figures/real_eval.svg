@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="12">
+<rect width="980" height="400" fill="#fff"/>
+<pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#111" stroke-width="1.5"/></pattern>
+<text x="20" y="30" font-size="17" font-weight="bold">실사진 38장: 자동 연결로 찾은 쌍과 잘못 묶은 쌍</text>
+<text x="20" y="52" fill="#555">같은 장소 쌍 75개, 다른 장소 쌍 628개. 다리 기준값은 직접 기준값 + 0.02.</text>
+<text x="200" y="85" font-weight="bold">찾은 같은 장소 쌍 (75개 중)</text><text x="760" y="85" font-weight="bold">오탐 (628개 중)</text>
+<text x="188" y="127" text-anchor="end">run_g0</text>
+<rect x="200" y="105" width="506" height="34" fill="none" stroke="#ddd"/>
+<rect x="200" y="105" width="357.8" height="34" fill="#555" stroke="#111"/>
+<rect x="557.8" y="105" width="20.2" height="34" fill="url(#h)" stroke="#111"/>
+<text x="586.0" y="127">56 (직접 53, 다리 3)</text>
+<rect x="760" y="105" width="40" height="34" fill="#111"/><text x="808" y="127">4</text>
+<text x="188" y="189" text-anchor="end">run_f1 시드 0</text>
+<rect x="200" y="167" width="506" height="34" fill="none" stroke="#ddd"/>
+<rect x="200" y="167" width="364.5" height="34" fill="#555" stroke="#111"/>
+<rect x="564.5" y="167" width="60.8" height="34" fill="url(#h)" stroke="#111"/>
+<text x="633.2" y="189">63 (직접 54, 다리 9)</text>
+<rect x="760" y="167" width="50" height="34" fill="#111"/><text x="818" y="189">5</text>
+<text x="188" y="251" text-anchor="end">run_f1 시드 1</text>
+<rect x="200" y="229" width="506" height="34" fill="none" stroke="#ddd"/>
+<rect x="200" y="229" width="351.0" height="34" fill="#555" stroke="#111"/>
+<rect x="551.0" y="229" width="33.8" height="34" fill="url(#h)" stroke="#111"/>
+<text x="592.8" y="251">57 (직접 52, 다리 5)</text>
+<rect x="760" y="229" width="50" height="34" fill="#111"/><text x="818" y="251">5</text>
+<text x="188" y="313" text-anchor="end">run_f1 시드 2</text>
+<rect x="200" y="291" width="506" height="34" fill="none" stroke="#ddd"/>
+<rect x="200" y="291" width="411.8" height="34" fill="#555" stroke="#111"/>
+<rect x="611.8" y="291" width="13.5" height="34" fill="url(#h)" stroke="#111"/>
+<text x="633.2" y="313">63 (직접 61, 다리 2)</text>
+<rect x="760" y="291" width="170" height="34" fill="#111"/><text x="938" y="313">17</text>
+<rect x="200" y="360" width="14" height="14" fill="#555" stroke="#111"/><text x="220" y="372">직접 판정</text><rect x="300" y="360" width="14" height="14" fill="url(#h)" stroke="#111"/><text x="320" y="372">다리 판정</text><text x="420" y="372" fill="#555">확인 질문 후보는 모델마다 1~2개, 모두 실제로 같은 장소였어요.</text></svg>
