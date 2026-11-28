@@ -1,0 +1,145 @@
+{
+ "note": "실사진 60장(기존 38 + 처음 보는 22). 다리 기준값 = 직접 + 0.02. 사진과 사진 이름은 넣지 않음. 어두운 쌍 = 두 사진 모두 밝기 하위 35%.",
+ "models": {
+  "v1": {
+   "eth3d_threshold": 0.611,
+   "at_own_threshold": {
+    "seen38": {
+     "found": 63,
+     "pos": 75,
+     "fp": 5
+    },
+    "heldout22": {
+     "found": 73,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "at_0_611": {
+    "seen38": {
+     "found": 63,
+     "pos": 75,
+     "fp": 5
+    },
+    "heldout22": {
+     "found": 73,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "auc": 0.9836,
+   "mean_same": 0.709,
+   "mean_diff": 0.437,
+   "mean_diff_dark": 0.476,
+   "fp_at_100_found": 4,
+   "fp_at_120_found": 18,
+   "hard_pair_ceiling_selfie": 0.558,
+   "hard_pair_cafe_two_seats": 0.565
+  },
+  "a1": {
+   "eth3d_threshold": 0.6,
+   "at_own_threshold": {
+    "seen38": {
+     "found": 64,
+     "pos": 75,
+     "fp": 31
+    },
+    "heldout22": {
+     "found": 76,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "at_0_611": {
+    "seen38": {
+     "found": 62,
+     "pos": 75,
+     "fp": 18
+    },
+    "heldout22": {
+     "found": 69,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "auc": 0.9839,
+   "mean_same": 0.712,
+   "mean_diff": 0.437,
+   "mean_diff_dark": 0.482,
+   "fp_at_100_found": 5,
+   "fp_at_120_found": 15,
+   "hard_pair_ceiling_selfie": 0.552,
+   "hard_pair_cafe_two_seats": 0.568
+  },
+  "a2": {
+   "eth3d_threshold": 0.605,
+   "at_own_threshold": {
+    "seen38": {
+     "found": 52,
+     "pos": 75,
+     "fp": 4
+    },
+    "heldout22": {
+     "found": 70,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "at_0_611": {
+    "seen38": {
+     "found": 49,
+     "pos": 75,
+     "fp": 2
+    },
+    "heldout22": {
+     "found": 55,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "auc": 0.9854,
+   "mean_same": 0.701,
+   "mean_diff": 0.432,
+   "mean_diff_dark": 0.466,
+   "fp_at_100_found": 6,
+   "fp_at_120_found": 14,
+   "hard_pair_ceiling_selfie": 0.574,
+   "hard_pair_cafe_two_seats": 0.549
+  },
+  "a3": {
+   "eth3d_threshold": 0.617,
+   "at_own_threshold": {
+    "seen38": {
+     "found": 57,
+     "pos": 75,
+     "fp": 9
+    },
+    "heldout22": {
+     "found": 64,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "at_0_611": {
+    "seen38": {
+     "found": 58,
+     "pos": 75,
+     "fp": 11
+    },
+    "heldout22": {
+     "found": 71,
+     "pos": 82,
+     "fp": 0
+    }
+   },
+   "auc": 0.9854,
+   "mean_same": 0.711,
+   "mean_diff": 0.433,
+   "mean_diff_dark": 0.476,
+   "fp_at_100_found": 7,
+   "fp_at_120_found": 17,
+   "hard_pair_ceiling_selfie": 0.59,
+   "hard_pair_cafe_two_seats": 0.555
+  }
+ }
+}
